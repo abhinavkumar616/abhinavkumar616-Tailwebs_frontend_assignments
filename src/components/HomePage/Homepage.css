@@ -1,0 +1,205 @@
+.homepage-container {
+    padding: 20px;
+    position: relative;
+}
+
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+.add-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: -40px;
+}
+
+.add-button:hover {
+    background-color: #218838;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 60px;
+    font-size: 16px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.table td {
+    background-color: #f9f9f9;
+}
+
+.edit-button, .delete-button {
+    padding: 8px 12px;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-color: #ffc107;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+.popup-inner form div {
+    margin-bottom: 15px;
+}
+
+.popup-inner form div label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.popup-inner form div input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.cancel-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.cancel-button:hover {
+    background-color: #c82333;
+}
+
+.success-message, .error-message {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.success-message {
+    background-color: #28a745;
+}
+
+.error-message {
+    background-color: #dc3545;
+}
+
+.viewtable {
+    margin-top: -30px;
+    overflow-x: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .logout-button, .add-button {
+        position: static;
+        margin-bottom: 20px;
+        display: block;
+        width: 100%;
+    }
+
+    .popup-inner {
+        width: 100%;
+    }
+
+    .table th, .table td {
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .table th, .table td {
+        font-size: 14px;
+    }
+
+    .edit-button, .delete-button {
+        padding: 6px 10px;
+    }
+}

@@ -131,10 +131,6 @@ const Homepage = () => {
         navigate('/loginpage');
     };
 
-    const getInitials = (name) => {
-        return name ? name.charAt(0).toUpperCase() : '';
-    };
-
     return (
         <div className="homepage-container">
             <button className="logout-button" onClick={handleLogout}>Logout</button>
@@ -144,8 +140,7 @@ const Homepage = () => {
             <table className="table table-bordered">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Symbol</th>
+                        <th>ID</th>
                         <th>Name</th>
                         <th>Subject</th>
                         <th>Marks</th>
@@ -153,10 +148,9 @@ const Homepage = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {students.map((student, index) => (
+                    {students.map(student => (
                         <tr key={student._id}>
-                            <td>{index + 1}</td>
-                            <td className="symbol">{getInitials(student.name)}</td>
+                            <td>{student._id}</td>
                             <td>{student.name}</td>
                             <td>{student.subject}</td>
                             <td>{student.marks}</td>

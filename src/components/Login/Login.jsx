@@ -32,7 +32,7 @@ const Login = () => {
                 // Capture the session ID from the response
                 const { sessionId } = response.data;
 
-                console.log("sessionId------",sessionId);
+                console.log("sessionId------", sessionId);
 
                 // Check if sessionId is available
                 if (sessionId) {
@@ -68,18 +68,20 @@ const Login = () => {
             <div className='container'>
                 <div className='form-center'>
                     <form className='login-form'>
-                        <h1>Welcome!</h1>
-                        {error && <div className="alert alert-danger" role="alert">{error}</div>}
-                        <div className="mb-3">
-                            <label htmlFor="exampleInputUsername" className="form-label">Username</label>
-                            <input type="text" className="form-control" id="exampleInputUsername" name="username" onChange={(e) => setUsername(e.target.value)} placeholder='Username' autoComplete="new-username" required />
+                        <div className='input-tags'>
+                            <h1>Welcome!</h1>
+                            {error && <div className="alert alert-danger" role="alert">{error}</div>}
+                            <div className="mb-3">
+                                <label htmlFor="exampleInputUsername" className="form-label">Username</label>
+                                <input type="text" className="form-control" id="exampleInputUsername" name="username" onChange={(e) => setUsername(e.target.value)} placeholder='Username' autoComplete="new-username" required />
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="exampleInputPassword" className="form-label">Password</label>
+                                <input type="password" className="form-control" id="exampleInputPassword" name="password" onChange={(e) => setPassword(e.target.value)} placeholder='Enter Password' autoComplete="new-password" required />
+                            </div>
+                            <button type="button" onClick={postData} className="btn btn-primary w-100 mb-3">Submit</button>
+                            <button type="button" onClick={() => navigate('/signUp')} className="btn btn-secondary w-100">Register here?</button>
                         </div>
-                        <div className="mb-3">
-                            <label htmlFor="exampleInputPassword" className="form-label">Password</label>
-                            <input type="password" className="form-control" id="exampleInputPassword" name="password" onChange={(e) => setPassword(e.target.value)} placeholder='Enter Password' autoComplete="new-password" required />
-                        </div>
-                        <button type="button" onClick={postData} className="btn btn-primary w-100 mb-3">Submit</button>
-                        <button type="button" onClick={() => navigate('/signUp')} className="btn btn-secondary w-100">Register here?</button>
                     </form>
                 </div>
             </div>

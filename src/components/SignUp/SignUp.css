@@ -1,0 +1,13 @@
+.form-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.login-form{
+    box-sizing: border-box;
+    box-shadow: 1px 3px 9px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+}
